@@ -9,6 +9,7 @@ using System;
 using System.Reflection.Emit;
 using PDF_Generator;
 using UnityEngine.UI;
+using System.Net.Configuration;
 
 public class Sender : MonoBehaviour
 {  
@@ -28,6 +29,8 @@ public class Sender : MonoBehaviour
 
     private void Start()
     {
+
+
         _generatePdfButton.onClick.AddListener(GeneratePdf);
         _sendEmailButton.onClick.AddListener(SendEmail);
 
@@ -40,6 +43,7 @@ public class Sender : MonoBehaviour
         _generatePdfButton.onClick.RemoveAllListeners();
         _sendEmailButton.onClick.RemoveAllListeners();
     }
+
 
     private void GeneratePdf()
     {
